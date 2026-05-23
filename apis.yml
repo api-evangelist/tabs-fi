@@ -1,0 +1,110 @@
+aid: tabs-fi
+name: Tabs
+description: Tabs is an AI-native revenue automation platform for B2B companies, unifying billing, collections, revenue recognition, and reporting on top of a contract-driven data model. The platform ingests executed contracts and automatically generates invoices, schedules ASC 606-compliant revenue, drives collections through AI agents, and produces real-time ARR, cash, and AR reporting. It is designed for finance teams at SaaS and B2B subscription companies who need flexibility across subscription, usage-based, metered, and hybrid billing models. Tabs exposes a REST API and integrates with ERP, CRM, payment, and tax systems so contract, billing, and revenue data can flow into the rest of the finance stack. It is SOC 2 compliant and includes a unified customer record spanning contracts, usage, payments, and terms.
+type: Index
+position: Provider
+access: 3rd-Party
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - Tabs
+  - Revenue
+  - Billing
+  - Invoicing
+  - Accounts Receivable
+  - Collections
+  - Revenue Recognition
+  - Contracts
+  - Usage
+  - Payments
+  - Subscriptions
+  - Finance
+  - B2B
+url: https://raw.githubusercontent.com/api-evangelist/tabs-fi/refs/heads/main/apis.yml
+created: '2026-05-23'
+modified: '2026-05-23'
+specificationVersion: '0.20'
+apis:
+  - aid: tabs-fi:tabs-platform-api
+    name: Tabs Platform API
+    description: REST API for the Tabs revenue automation platform that exposes the core data model of customers, contracts, items, revenue categories, obligations, invoices, payments, and usage events. The API lets finance and engineering teams embed billing into their products, sync contract and usage data, generate invoices, and reconcile payments programmatically. An LLM-friendly index of all docs and OpenAPI endpoints is published at docs.tabsplatform.com/llms.txt.
+    humanURL: https://docs.tabsplatform.com/
+    tags:
+      - Billing
+      - Invoicing
+      - Collections
+      - Revenue Recognition
+      - Contracts
+      - Usage
+      - Payments
+      - Customers
+    properties:
+      - type: Documentation
+        url: https://docs.tabsplatform.com/
+      - type: GettingStarted
+        url: https://docs.tabsplatform.com/
+      - type: Authentication
+        url: https://docs.tabsplatform.com/
+      - type: LLMs
+        url: https://docs.tabsplatform.com/llms.txt
+      - type: SignUp
+        url: https://www.tabs.com/
+      - type: Pricing
+        url: https://www.tabs.com/pricing
+    features:
+      - name: Contract Intelligence
+        description: Ingests executed contracts and extracts the data needed to drive billing, revenue recognition, and renewals without manual entry.
+      - name: Automated Billing
+        description: Generates invoices directly from contracts and obligations, supporting subscription, usage-based, metered, and hybrid models.
+      - name: Collections Automation
+        description: AI agents send payment reminders, embed payment links, and match incoming payments to outstanding invoices.
+      - name: ASC 606 Revenue Recognition
+        description: Schedules and posts revenue in compliance with ASC 606 using contract and billing data as the source of truth.
+      - name: Usage Event Ingestion
+        description: Streams consumption events into the platform for metered billing and downstream revenue accounting.
+      - name: Unified Customer Record
+        description: Combines contracts, usage, payments, and terms into a single customer view that downstream systems can query.
+      - name: Real-Time Reporting
+        description: Surfaces ARR, cash, AR balance, and renewals in real time for finance leadership and operators.
+      - name: Webhooks and Events
+        description: Notifies external systems of invoice, payment, and contract events so customers can build automation around revenue.
+    useCases:
+      - name: SaaS Subscription Billing
+        description: Automate recurring invoicing and revenue scheduling for SaaS companies running annual, monthly, or hybrid contracts.
+      - name: Usage-Based Billing for AI and Infrastructure
+        description: Meter consumption events from AI, API, or infrastructure products and turn them into invoices and revenue schedules.
+      - name: ERP and CRM Sync
+        description: Keep ERP general ledgers and CRM opportunity data in sync with the contracts and invoices managed in Tabs.
+      - name: Cash Application
+        description: Auto-match incoming ACH, wire, and Stripe payments against open invoices to clear AR balances.
+      - name: Revenue Reporting for Finance Leadership
+        description: Provide CFOs and controllers with live ARR, AR aging, and renewal visibility tied back to source contracts.
+    integrations:
+      - name: QuickBooks Online
+      - name: NetSuite
+      - name: Sage Intacct
+      - name: Oracle
+      - name: Rillet
+      - name: Salesforce
+      - name: HubSpot
+      - name: Stripe
+      - name: Plaid
+      - name: Anrok
+      - name: Avalara
+      - name: DocuSign
+    authentication:
+      - type: API Key
+        description: Server-side API key authentication issued from the Tabs dashboard for backend integrations.
+common:
+  - type: Website
+    url: https://www.tabs.com/
+  - type: Documentation
+    url: https://docs.tabsplatform.com/
+  - type: Pricing
+    url: https://www.tabs.com/pricing
+  - type: Integrations
+    url: https://www.tabs.com/integrations
+  - type: LLMs
+    url: https://docs.tabsplatform.com/llms.txt
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
