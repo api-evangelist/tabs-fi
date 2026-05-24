@@ -1,0 +1,828 @@
+openapi: 3.1.0
+info:
+  title: Tabs Platform API
+  description: >-
+    REST API for the Tabs revenue automation platform: customers, contracts,
+    items, revenue categories, obligations, billing terms, invoices, payments,
+    credit memos, usage events, and reports. Source:
+    https://docs.tabsplatform.com/llms.txt
+  version: "3"
+  contact:
+    name: Tabs
+    url: https://docs.tabsplatform.com/
+servers:
+  - url: https://api.tabsplatform.com
+    description: Production (assumed; consult Tabs docs for exact base URL)
+security:
+  - ApiKeyAuth: []
+tags:
+  - name: BillingTerms
+  - name: Categories
+  - name: Commitments
+  - name: Contracts
+  - name: Obligations
+  - name: PerformanceObligations
+  - name: CreditMemos
+  - name: CustomFields
+  - name: Customers
+  - name: Invoices
+  - name: Payments
+  - name: Items
+  - name: Events
+  - name: EventTypes
+  - name: UsageEvents
+  - name: Jobs
+  - name: Merchant
+  - name: Renewals
+  - name: Revenue
+  - name: Reports
+  - name: System
+paths:
+  /billing-terms:
+    get:
+      tags: [BillingTerms]
+      summary: List billing terms
+      operationId: listBillingTerms
+      responses:
+        "200":
+          description: OK
+  /categories:
+    get:
+      tags: [Categories]
+      summary: List categories
+      operationId: listCategories
+      responses:
+        "200":
+          description: OK
+    post:
+      tags: [Categories]
+      summary: Create category
+      operationId: createCategory
+      responses:
+        "201":
+          description: Created
+  /categories/{id}:
+    parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+    get:
+      tags: [Categories]
+      summary: Get category by ID
+      operationId: getCategory
+      responses:
+        "200":
+          description: OK
+    delete:
+      tags: [Categories]
+      summary: Delete category
+      operationId: deleteCategory
+      responses:
+        "204":
+          description: Deleted
+  /classes:
+    get:
+      tags: [Categories]
+      summary: List classes
+      operationId: listClasses
+      responses:
+        "200":
+          description: OK
+  /commitments:
+    get:
+      tags: [Commitments]
+      summary: List commitments
+      operationId: listCommitments
+      responses:
+        "200":
+          description: OK
+    post:
+      tags: [Commitments]
+      summary: Create commitments
+      operationId: createCommitments
+      responses:
+        "201":
+          description: Created
+  /commitments/{id}:
+    parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+    patch:
+      tags: [Commitments]
+      summary: Update commitment
+      operationId: updateCommitment
+      responses:
+        "200":
+          description: OK
+  /contracts:
+    get:
+      tags: [Contracts]
+      summary: List contracts
+      operationId: listContracts
+      responses:
+        "200":
+          description: OK
+    post:
+      tags: [Contracts]
+      summary: Create contract
+      operationId: createContract
+      responses:
+        "201":
+          description: Created
+  /contracts/{id}:
+    parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+    get:
+      tags: [Contracts]
+      summary: Get contract by ID
+      operationId: getContract
+      responses:
+        "200":
+          description: OK
+    patch:
+      tags: [Contracts]
+      summary: Update contract
+      operationId: updateContract
+      responses:
+        "200":
+          description: OK
+  /contracts/{id}/actions:
+    parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+    post:
+      tags: [Contracts]
+      summary: Perform contract action
+      operationId: contractAction
+      responses:
+        "200":
+          description: OK
+  /contracts/{id}/file:
+    parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+    get:
+      tags: [Contracts]
+      summary: Download contract file
+      operationId: downloadContractFile
+      responses:
+        "200":
+          description: OK
+    post:
+      tags: [Contracts]
+      summary: Upload contract file
+      operationId: uploadContractFile
+      responses:
+        "201":
+          description: Created
+  /contracts/{id}/obligations:
+    parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+    post:
+      tags: [Obligations]
+      summary: Create contract obligation
+      operationId: createContractObligation
+      responses:
+        "201":
+          description: Created
+  /contracts/{id}/obligations/{obligationId}:
+    parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: obligationId
+        in: path
+        required: true
+        schema:
+          type: string
+    get:
+      tags: [Obligations]
+      summary: Get obligation by ID
+      operationId: getContractObligation
+      responses:
+        "200":
+          description: OK
+    patch:
+      tags: [Obligations]
+      summary: Update obligation
+      operationId: updateContractObligation
+      responses:
+        "200":
+          description: OK
+    delete:
+      tags: [Obligations]
+      summary: Delete obligation
+      operationId: deleteContractObligation
+      responses:
+        "204":
+          description: Deleted
+  /obligations:
+    get:
+      tags: [Obligations]
+      summary: List obligations
+      operationId: listObligations
+      responses:
+        "200":
+          description: OK
+  /obligations/custom-revenue:
+    post:
+      tags: [Obligations]
+      summary: Upsert custom revenue
+      operationId: upsertCustomRevenue
+      responses:
+        "200":
+          description: OK
+  /contracts/{id}/billing-terms:
+    parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+    get:
+      tags: [BillingTerms]
+      summary: List contract billing terms
+      operationId: listContractBillingTerms
+      responses:
+        "200":
+          description: OK
+    post:
+      tags: [BillingTerms]
+      summary: Create contract billing term
+      operationId: createContractBillingTerm
+      responses:
+        "201":
+          description: Created
+  /contracts/{id}/billing-terms/{termId}:
+    parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: termId
+        in: path
+        required: true
+        schema:
+          type: string
+    patch:
+      tags: [BillingTerms]
+      summary: Update billing term
+      operationId: updateContractBillingTerm
+      responses:
+        "200":
+          description: OK
+    delete:
+      tags: [BillingTerms]
+      summary: Delete billing term
+      operationId: deleteContractBillingTerm
+      responses:
+        "204":
+          description: Deleted
+  /contracts/{id}/performance-obligations:
+    parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+    get:
+      tags: [PerformanceObligations]
+      summary: List performance obligations
+      operationId: listContractPerformanceObligations
+      responses:
+        "200":
+          description: OK
+  /contracts/{id}/performance-obligations/batch:
+    parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+    post:
+      tags: [PerformanceObligations]
+      summary: Bulk save performance obligations
+      operationId: bulkSavePerformanceObligations
+      responses:
+        "200":
+          description: OK
+  /performance-obligations:
+    get:
+      tags: [PerformanceObligations]
+      summary: List performance obligations
+      operationId: listPerformanceObligations
+      responses:
+        "200":
+          description: OK
+  /performance-obligations/{id}:
+    parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+    patch:
+      tags: [PerformanceObligations]
+      summary: Update performance obligation
+      operationId: updatePerformanceObligation
+      responses:
+        "200":
+          description: OK
+  /credit-memos:
+    get:
+      tags: [CreditMemos]
+      summary: List credit memos
+      operationId: listCreditMemos
+      responses:
+        "200":
+          description: OK
+    post:
+      tags: [CreditMemos]
+      summary: Create credit memo
+      operationId: createCreditMemo
+      responses:
+        "201":
+          description: Created
+  /credit-memos/{id}:
+    parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+    get:
+      tags: [CreditMemos]
+      summary: Get credit memo by ID
+      operationId: getCreditMemo
+      responses:
+        "200":
+          description: OK
+  /credit-memos/{id}/apply:
+    parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+    post:
+      tags: [CreditMemos]
+      summary: Apply credit memo
+      operationId: applyCreditMemo
+      responses:
+        "200":
+          description: OK
+  /custom-fields:
+    get:
+      tags: [CustomFields]
+      summary: List custom fields
+      operationId: listCustomFields
+      responses:
+        "200":
+          description: OK
+  /customers:
+    get:
+      tags: [Customers]
+      summary: List customers
+      operationId: listCustomers
+      responses:
+        "200":
+          description: OK
+    post:
+      tags: [Customers]
+      summary: Create customer
+      operationId: createCustomer
+      responses:
+        "201":
+          description: Created
+  /customers/{id}:
+    parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+    get:
+      tags: [Customers]
+      summary: Get customer by ID
+      operationId: getCustomer
+      responses:
+        "200":
+          description: OK
+    delete:
+      tags: [Customers]
+      summary: Delete customer
+      operationId: deleteCustomer
+      responses:
+        "204":
+          description: Deleted
+  /customers/{id}/name:
+    parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+    patch:
+      tags: [Customers]
+      summary: Update customer name
+      operationId: updateCustomerName
+      responses:
+        "200":
+          description: OK
+  /customers/{id}/contacts:
+    parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+    get:
+      tags: [Customers]
+      summary: List contacts
+      operationId: listCustomerContacts
+      responses:
+        "200":
+          description: OK
+    post:
+      tags: [Customers]
+      summary: Create contacts
+      operationId: createCustomerContacts
+      responses:
+        "201":
+          description: Created
+  /customers/{id}/contacts/{contactId}:
+    parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: contactId
+        in: path
+        required: true
+        schema:
+          type: string
+    patch:
+      tags: [Customers]
+      summary: Update contact
+      operationId: updateCustomerContact
+      responses:
+        "200":
+          description: OK
+  /invoices:
+    get:
+      tags: [Invoices]
+      summary: List invoices
+      operationId: listInvoices
+      responses:
+        "200":
+          description: OK
+  /customers/{customerId}/invoices/{invoiceId}:
+    parameters:
+      - name: customerId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: invoiceId
+        in: path
+        required: true
+        schema:
+          type: string
+    get:
+      tags: [Invoices]
+      summary: Get invoice by ID
+      operationId: getInvoice
+      responses:
+        "200":
+          description: OK
+  /customers/{customerId}/invoices/{invoiceId}/pdf:
+    parameters:
+      - name: customerId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: invoiceId
+        in: path
+        required: true
+        schema:
+          type: string
+    get:
+      tags: [Invoices]
+      summary: Download invoice PDF
+      operationId: getInvoicePdf
+      responses:
+        "200":
+          description: OK
+  /customers/{customerId}/invoices/{invoiceId}/actions:
+    parameters:
+      - name: customerId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: invoiceId
+        in: path
+        required: true
+        schema:
+          type: string
+    post:
+      tags: [Invoices]
+      summary: Perform invoice action
+      operationId: invoiceAction
+      responses:
+        "200":
+          description: OK
+  /customers/{customerId}/invoices/{invoiceId}/payments:
+    parameters:
+      - name: customerId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: invoiceId
+        in: path
+        required: true
+        schema:
+          type: string
+    post:
+      tags: [Payments]
+      summary: Create payment
+      operationId: createInvoicePayment
+      responses:
+        "201":
+          description: Created
+  /customers/{customerId}/invoices/{invoiceId}/payments/{paymentId}:
+    parameters:
+      - name: customerId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: invoiceId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: paymentId
+        in: path
+        required: true
+        schema:
+          type: string
+    get:
+      tags: [Payments]
+      summary: Get payment by ID
+      operationId: getInvoicePayment
+      responses:
+        "200":
+          description: OK
+  /payments:
+    get:
+      tags: [Payments]
+      summary: List payments
+      operationId: listPayments
+      responses:
+        "200":
+          description: OK
+  /items:
+    get:
+      tags: [Items]
+      summary: List items
+      operationId: listItems
+      responses:
+        "200":
+          description: OK
+  /items/{id}:
+    parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+    get:
+      tags: [Items]
+      summary: Get item by ID
+      operationId: getItem
+      responses:
+        "200":
+          description: OK
+  /events:
+    get:
+      tags: [Events]
+      summary: List events (legacy)
+      operationId: listEvents
+      responses:
+        "200":
+          description: OK
+    post:
+      tags: [Events]
+      summary: Create event (legacy)
+      operationId: createEvent
+      responses:
+        "201":
+          description: Created
+  /events/bulk:
+    post:
+      tags: [Events]
+      summary: Bulk create events
+      operationId: bulkCreateEvents
+      responses:
+        "201":
+          description: Created
+  /events/{id}:
+    parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+    delete:
+      tags: [Events]
+      summary: Delete event
+      operationId: deleteEvent
+      responses:
+        "204":
+          description: Deleted
+  /event-types:
+    get:
+      tags: [EventTypes]
+      summary: List event types
+      operationId: listEventTypes
+      responses:
+        "200":
+          description: OK
+    post:
+      tags: [EventTypes]
+      summary: Create event type
+      operationId: createEventType
+      responses:
+        "201":
+          description: Created
+  /event-types/{id}:
+    parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+    get:
+      tags: [EventTypes]
+      summary: Get event type by ID
+      operationId: getEventType
+      responses:
+        "200":
+          description: OK
+    delete:
+      tags: [EventTypes]
+      summary: Delete event type
+      operationId: deleteEventType
+      responses:
+        "204":
+          description: Deleted
+  /usage-events:
+    get:
+      tags: [UsageEvents]
+      summary: Get all usage events (beta)
+      operationId: listUsageEvents
+      responses:
+        "200":
+          description: OK
+    post:
+      tags: [UsageEvents]
+      summary: Create usage event (beta)
+      operationId: createUsageEvent
+      responses:
+        "201":
+          description: Created
+  /usage-events/{id}:
+    parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+    delete:
+      tags: [UsageEvents]
+      summary: Delete usage event
+      operationId: deleteUsageEvent
+      responses:
+        "204":
+          description: Deleted
+  /jobs/{id}:
+    parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+    get:
+      tags: [Jobs]
+      summary: Get job status by ID
+      operationId: getJob
+      responses:
+        "200":
+          description: OK
+  /merchant:
+    get:
+      tags: [Merchant]
+      summary: Get merchant info
+      operationId: getMerchant
+      responses:
+        "200":
+          description: OK
+  /renewals:
+    get:
+      tags: [Renewals]
+      summary: List renewals
+      operationId: listRenewals
+      responses:
+        "200":
+          description: OK
+  /revenue:
+    get:
+      tags: [Revenue]
+      summary: List revenue
+      operationId: listRevenue
+      responses:
+        "200":
+          description: OK
+  /reports/arr:
+    get:
+      tags: [Reports]
+      summary: Get ARR report
+      operationId: getArrReport
+      responses:
+        "200":
+          description: OK
+  /reports/cash-forecasting:
+    get:
+      tags: [Reports]
+      summary: Get cash forecasting report
+      operationId: getCashForecastingReport
+      responses:
+        "200":
+          description: OK
+  /health:
+    get:
+      tags: [System]
+      summary: Health check
+      operationId: health
+      responses:
+        "200":
+          description: OK
+  /health/live:
+    get:
+      tags: [System]
+      summary: Liveness check
+      operationId: healthLive
+      responses:
+        "200":
+          description: OK
+  /version:
+    get:
+      tags: [System]
+      summary: Get API version
+      operationId: getVersion
+      responses:
+        "200":
+          description: OK
+  /info:
+    get:
+      tags: [System]
+      summary: Application information
+      operationId: getInfo
+      responses:
+        "200":
+          description: OK
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: >-
+        Server-side API key issued from the Tabs dashboard for backend
+        integrations.
