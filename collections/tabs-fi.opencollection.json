@@ -1,0 +1,1315 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Tabs Platform API",
+    "version": "3"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "BillingTerms",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List billing terms",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.tabsplatform.com/billing-terms"
+          },
+          "docs": "List billing terms"
+        },
+        {
+          "info": {
+            "name": "List contract billing terms",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.tabsplatform.com/contracts/:id/billing-terms",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List contract billing terms"
+        },
+        {
+          "info": {
+            "name": "Create contract billing term",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.tabsplatform.com/contracts/:id/billing-terms",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Create contract billing term"
+        },
+        {
+          "info": {
+            "name": "Update billing term",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://api.tabsplatform.com/contracts/:id/billing-terms/:termId",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "termId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update billing term"
+        },
+        {
+          "info": {
+            "name": "Delete billing term",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.tabsplatform.com/contracts/:id/billing-terms/:termId",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "termId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete billing term"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Categories",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List categories",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.tabsplatform.com/categories"
+          },
+          "docs": "List categories"
+        },
+        {
+          "info": {
+            "name": "Create category",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.tabsplatform.com/categories"
+          },
+          "docs": "Create category"
+        },
+        {
+          "info": {
+            "name": "Get category by ID",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.tabsplatform.com/categories/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get category by ID"
+        },
+        {
+          "info": {
+            "name": "Delete category",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.tabsplatform.com/categories/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete category"
+        },
+        {
+          "info": {
+            "name": "List classes",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.tabsplatform.com/classes"
+          },
+          "docs": "List classes"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Commitments",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List commitments",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.tabsplatform.com/commitments"
+          },
+          "docs": "List commitments"
+        },
+        {
+          "info": {
+            "name": "Create commitments",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.tabsplatform.com/commitments"
+          },
+          "docs": "Create commitments"
+        },
+        {
+          "info": {
+            "name": "Update commitment",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://api.tabsplatform.com/commitments/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update commitment"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Contracts",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List contracts",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.tabsplatform.com/contracts"
+          },
+          "docs": "List contracts"
+        },
+        {
+          "info": {
+            "name": "Create contract",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.tabsplatform.com/contracts"
+          },
+          "docs": "Create contract"
+        },
+        {
+          "info": {
+            "name": "Get contract by ID",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.tabsplatform.com/contracts/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get contract by ID"
+        },
+        {
+          "info": {
+            "name": "Update contract",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://api.tabsplatform.com/contracts/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update contract"
+        },
+        {
+          "info": {
+            "name": "Perform contract action",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.tabsplatform.com/contracts/:id/actions",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Perform contract action"
+        },
+        {
+          "info": {
+            "name": "Download contract file",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.tabsplatform.com/contracts/:id/file",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Download contract file"
+        },
+        {
+          "info": {
+            "name": "Upload contract file",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.tabsplatform.com/contracts/:id/file",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Upload contract file"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Obligations",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create contract obligation",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.tabsplatform.com/contracts/:id/obligations",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Create contract obligation"
+        },
+        {
+          "info": {
+            "name": "Get obligation by ID",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.tabsplatform.com/contracts/:id/obligations/:obligationId",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "obligationId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get obligation by ID"
+        },
+        {
+          "info": {
+            "name": "Update obligation",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://api.tabsplatform.com/contracts/:id/obligations/:obligationId",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "obligationId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update obligation"
+        },
+        {
+          "info": {
+            "name": "Delete obligation",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.tabsplatform.com/contracts/:id/obligations/:obligationId",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "obligationId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete obligation"
+        },
+        {
+          "info": {
+            "name": "List obligations",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.tabsplatform.com/obligations"
+          },
+          "docs": "List obligations"
+        },
+        {
+          "info": {
+            "name": "Upsert custom revenue",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.tabsplatform.com/obligations/custom-revenue"
+          },
+          "docs": "Upsert custom revenue"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "PerformanceObligations",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List performance obligations",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.tabsplatform.com/contracts/:id/performance-obligations",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List performance obligations"
+        },
+        {
+          "info": {
+            "name": "Bulk save performance obligations",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.tabsplatform.com/contracts/:id/performance-obligations/batch",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Bulk save performance obligations"
+        },
+        {
+          "info": {
+            "name": "List performance obligations",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.tabsplatform.com/performance-obligations"
+          },
+          "docs": "List performance obligations"
+        },
+        {
+          "info": {
+            "name": "Update performance obligation",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://api.tabsplatform.com/performance-obligations/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update performance obligation"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "CreditMemos",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List credit memos",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.tabsplatform.com/credit-memos"
+          },
+          "docs": "List credit memos"
+        },
+        {
+          "info": {
+            "name": "Create credit memo",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.tabsplatform.com/credit-memos"
+          },
+          "docs": "Create credit memo"
+        },
+        {
+          "info": {
+            "name": "Get credit memo by ID",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.tabsplatform.com/credit-memos/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get credit memo by ID"
+        },
+        {
+          "info": {
+            "name": "Apply credit memo",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.tabsplatform.com/credit-memos/:id/apply",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Apply credit memo"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "CustomFields",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List custom fields",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.tabsplatform.com/custom-fields"
+          },
+          "docs": "List custom fields"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Customers",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List customers",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.tabsplatform.com/customers"
+          },
+          "docs": "List customers"
+        },
+        {
+          "info": {
+            "name": "Create customer",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.tabsplatform.com/customers"
+          },
+          "docs": "Create customer"
+        },
+        {
+          "info": {
+            "name": "Get customer by ID",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.tabsplatform.com/customers/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get customer by ID"
+        },
+        {
+          "info": {
+            "name": "Delete customer",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.tabsplatform.com/customers/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete customer"
+        },
+        {
+          "info": {
+            "name": "Update customer name",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://api.tabsplatform.com/customers/:id/name",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update customer name"
+        },
+        {
+          "info": {
+            "name": "List contacts",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.tabsplatform.com/customers/:id/contacts",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List contacts"
+        },
+        {
+          "info": {
+            "name": "Create contacts",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.tabsplatform.com/customers/:id/contacts",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Create contacts"
+        },
+        {
+          "info": {
+            "name": "Update contact",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://api.tabsplatform.com/customers/:id/contacts/:contactId",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "contactId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update contact"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Invoices",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List invoices",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.tabsplatform.com/invoices"
+          },
+          "docs": "List invoices"
+        },
+        {
+          "info": {
+            "name": "Get invoice by ID",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.tabsplatform.com/customers/:customerId/invoices/:invoiceId",
+            "params": [
+              {
+                "name": "customerId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "invoiceId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get invoice by ID"
+        },
+        {
+          "info": {
+            "name": "Download invoice PDF",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.tabsplatform.com/customers/:customerId/invoices/:invoiceId/pdf",
+            "params": [
+              {
+                "name": "customerId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "invoiceId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Download invoice PDF"
+        },
+        {
+          "info": {
+            "name": "Perform invoice action",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.tabsplatform.com/customers/:customerId/invoices/:invoiceId/actions",
+            "params": [
+              {
+                "name": "customerId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "invoiceId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Perform invoice action"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Payments",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create payment",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.tabsplatform.com/customers/:customerId/invoices/:invoiceId/payments",
+            "params": [
+              {
+                "name": "customerId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "invoiceId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Create payment"
+        },
+        {
+          "info": {
+            "name": "Get payment by ID",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.tabsplatform.com/customers/:customerId/invoices/:invoiceId/payments/:paymentId",
+            "params": [
+              {
+                "name": "customerId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "invoiceId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "paymentId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get payment by ID"
+        },
+        {
+          "info": {
+            "name": "List payments",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.tabsplatform.com/payments"
+          },
+          "docs": "List payments"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Items",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List items",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.tabsplatform.com/items"
+          },
+          "docs": "List items"
+        },
+        {
+          "info": {
+            "name": "Get item by ID",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.tabsplatform.com/items/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get item by ID"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Events",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List events (legacy)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.tabsplatform.com/events"
+          },
+          "docs": "List events (legacy)"
+        },
+        {
+          "info": {
+            "name": "Create event (legacy)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.tabsplatform.com/events"
+          },
+          "docs": "Create event (legacy)"
+        },
+        {
+          "info": {
+            "name": "Bulk create events",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.tabsplatform.com/events/bulk"
+          },
+          "docs": "Bulk create events"
+        },
+        {
+          "info": {
+            "name": "Delete event",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.tabsplatform.com/events/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete event"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "EventTypes",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List event types",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.tabsplatform.com/event-types"
+          },
+          "docs": "List event types"
+        },
+        {
+          "info": {
+            "name": "Create event type",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.tabsplatform.com/event-types"
+          },
+          "docs": "Create event type"
+        },
+        {
+          "info": {
+            "name": "Get event type by ID",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.tabsplatform.com/event-types/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get event type by ID"
+        },
+        {
+          "info": {
+            "name": "Delete event type",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.tabsplatform.com/event-types/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete event type"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "UsageEvents",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get all usage events (beta)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.tabsplatform.com/usage-events"
+          },
+          "docs": "Get all usage events (beta)"
+        },
+        {
+          "info": {
+            "name": "Create usage event (beta)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.tabsplatform.com/usage-events"
+          },
+          "docs": "Create usage event (beta)"
+        },
+        {
+          "info": {
+            "name": "Delete usage event",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.tabsplatform.com/usage-events/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete usage event"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Jobs",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get job status by ID",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.tabsplatform.com/jobs/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get job status by ID"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Merchant",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get merchant info",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.tabsplatform.com/merchant"
+          },
+          "docs": "Get merchant info"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Renewals",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List renewals",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.tabsplatform.com/renewals"
+          },
+          "docs": "List renewals"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Revenue",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List revenue",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.tabsplatform.com/revenue"
+          },
+          "docs": "List revenue"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Reports",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get ARR report",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.tabsplatform.com/reports/arr"
+          },
+          "docs": "Get ARR report"
+        },
+        {
+          "info": {
+            "name": "Get cash forecasting report",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.tabsplatform.com/reports/cash-forecasting"
+          },
+          "docs": "Get cash forecasting report"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "System",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Health check",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.tabsplatform.com/health"
+          },
+          "docs": "Health check"
+        },
+        {
+          "info": {
+            "name": "Liveness check",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.tabsplatform.com/health/live"
+          },
+          "docs": "Liveness check"
+        },
+        {
+          "info": {
+            "name": "Get API version",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.tabsplatform.com/version"
+          },
+          "docs": "Get API version"
+        },
+        {
+          "info": {
+            "name": "Application information",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.tabsplatform.com/info"
+          },
+          "docs": "Application information"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
