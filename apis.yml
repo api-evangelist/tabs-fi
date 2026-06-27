@@ -46,7 +46,7 @@ apis:
         url: https://docs.tabsplatform.com/
       - type: LLMs
         url: https://docs.tabsplatform.com/llms.txt
-      - type: SignUp
+      - type: Signup
         url: https://www.tabs.com/
       - type: Pricing
         url: https://www.tabs.com/pricing
