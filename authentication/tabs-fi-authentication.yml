@@ -1,0 +1,16 @@
+generated: '2026-07-11'
+method: derived
+source: openapi/tabs-fi-openapi.yml
+summary:
+  types:
+  - apiKey
+  api_key_in:
+  - header
+schemes:
+- name: ApiKeyAuth
+  type: apiKey
+  in: header
+  parameter: Authorization
+  description: Server-side API key issued from the Tabs dashboard for backend integrations.
+  sources:
+  - openapi/tabs-fi-openapi.yml

@@ -95,6 +95,10 @@ apis:
       - type: API Key
         description: Server-side API key authentication issued from the Tabs dashboard for backend integrations.
 common:
+  - type: DomainSecurity
+    url: security/tabs-fi-domain-security.yml
+  - type: Authentication
+    url: authentication/tabs-fi-authentication.yml
   - type: Website
     url: https://www.tabs.com/
   - type: Documentation
@@ -105,6 +109,8 @@ common:
     url: https://www.tabs.com/integrations
   - type: LLMs
     url: https://docs.tabsplatform.com/llms.txt
+  - url: https://www.tabs.com/blog
+    type: Blog
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
