@@ -95,6 +95,8 @@ apis:
       - type: API Key
         description: Server-side API key authentication issued from the Tabs dashboard for backend integrations.
 common:
+  - type: AgenticAccess
+    url: agentic-access/tabs-fi-agentic-access.yml
   - type: DomainSecurity
     url: security/tabs-fi-domain-security.yml
   - type: Authentication
