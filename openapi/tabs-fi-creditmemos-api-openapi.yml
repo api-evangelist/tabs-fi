@@ -1,0 +1,70 @@
+openapi: 3.1.0
+info:
+  title: Tabs Platform BillingTerms CreditMemos API
+  description: 'REST API for the Tabs revenue automation platform: customers, contracts, items, revenue categories, obligations, billing terms, invoices, payments, credit memos, usage events, and reports. Source: https://docs.tabsplatform.com/llms.txt'
+  version: '3'
+  contact:
+    name: Tabs
+    url: https://docs.tabsplatform.com/
+servers:
+- url: https://api.tabsplatform.com
+  description: Production (assumed; consult Tabs docs for exact base URL)
+security:
+- ApiKeyAuth: []
+tags:
+- name: CreditMemos
+paths:
+  /credit-memos:
+    get:
+      tags:
+      - CreditMemos
+      summary: List credit memos
+      operationId: listCreditMemos
+      responses:
+        '200':
+          description: OK
+    post:
+      tags:
+      - CreditMemos
+      summary: Create credit memo
+      operationId: createCreditMemo
+      responses:
+        '201':
+          description: Created
+  /credit-memos/{id}:
+    parameters:
+    - name: id
+      in: path
+      required: true
+      schema:
+        type: string
+    get:
+      tags:
+      - CreditMemos
+      summary: Get credit memo by ID
+      operationId: getCreditMemo
+      responses:
+        '200':
+          description: OK
+  /credit-memos/{id}/apply:
+    parameters:
+    - name: id
+      in: path
+      required: true
+      schema:
+        type: string
+    post:
+      tags:
+      - CreditMemos
+      summary: Apply credit memo
+      operationId: applyCreditMemo
+      responses:
+        '200':
+          description: OK
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: Server-side API key issued from the Tabs dashboard for backend integrations.

@@ -1,0 +1,83 @@
+openapi: 3.1.0
+info:
+  title: Tabs Platform BillingTerms API
+  description: 'REST API for the Tabs revenue automation platform: customers, contracts, items, revenue categories, obligations, billing terms, invoices, payments, credit memos, usage events, and reports. Source: https://docs.tabsplatform.com/llms.txt'
+  version: '3'
+  contact:
+    name: Tabs
+    url: https://docs.tabsplatform.com/
+servers:
+- url: https://api.tabsplatform.com
+  description: Production (assumed; consult Tabs docs for exact base URL)
+security:
+- ApiKeyAuth: []
+tags:
+- name: BillingTerms
+paths:
+  /billing-terms:
+    get:
+      tags:
+      - BillingTerms
+      summary: List billing terms
+      operationId: listBillingTerms
+      responses:
+        '200':
+          description: OK
+  /contracts/{id}/billing-terms:
+    parameters:
+    - name: id
+      in: path
+      required: true
+      schema:
+        type: string
+    get:
+      tags:
+      - BillingTerms
+      summary: List contract billing terms
+      operationId: listContractBillingTerms
+      responses:
+        '200':
+          description: OK
+    post:
+      tags:
+      - BillingTerms
+      summary: Create contract billing term
+      operationId: createContractBillingTerm
+      responses:
+        '201':
+          description: Created
+  /contracts/{id}/billing-terms/{termId}:
+    parameters:
+    - name: id
+      in: path
+      required: true
+      schema:
+        type: string
+    - name: termId
+      in: path
+      required: true
+      schema:
+        type: string
+    patch:
+      tags:
+      - BillingTerms
+      summary: Update billing term
+      operationId: updateContractBillingTerm
+      responses:
+        '200':
+          description: OK
+    delete:
+      tags:
+      - BillingTerms
+      summary: Delete billing term
+      operationId: deleteContractBillingTerm
+      responses:
+        '204':
+          description: Deleted
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: Server-side API key issued from the Tabs dashboard for backend integrations.

@@ -1,0 +1,77 @@
+openapi: 3.1.0
+info:
+  title: Tabs Platform BillingTerms Payments API
+  description: 'REST API for the Tabs revenue automation platform: customers, contracts, items, revenue categories, obligations, billing terms, invoices, payments, credit memos, usage events, and reports. Source: https://docs.tabsplatform.com/llms.txt'
+  version: '3'
+  contact:
+    name: Tabs
+    url: https://docs.tabsplatform.com/
+servers:
+- url: https://api.tabsplatform.com
+  description: Production (assumed; consult Tabs docs for exact base URL)
+security:
+- ApiKeyAuth: []
+tags:
+- name: Payments
+paths:
+  /customers/{customerId}/invoices/{invoiceId}/payments:
+    parameters:
+    - name: customerId
+      in: path
+      required: true
+      schema:
+        type: string
+    - name: invoiceId
+      in: path
+      required: true
+      schema:
+        type: string
+    post:
+      tags:
+      - Payments
+      summary: Create payment
+      operationId: createInvoicePayment
+      responses:
+        '201':
+          description: Created
+  /customers/{customerId}/invoices/{invoiceId}/payments/{paymentId}:
+    parameters:
+    - name: customerId
+      in: path
+      required: true
+      schema:
+        type: string
+    - name: invoiceId
+      in: path
+      required: true
+      schema:
+        type: string
+    - name: paymentId
+      in: path
+      required: true
+      schema:
+        type: string
+    get:
+      tags:
+      - Payments
+      summary: Get payment by ID
+      operationId: getInvoicePayment
+      responses:
+        '200':
+          description: OK
+  /payments:
+    get:
+      tags:
+      - Payments
+      summary: List payments
+      operationId: listPayments
+      responses:
+        '200':
+          description: OK
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: Server-side API key issued from the Tabs dashboard for backend integrations.

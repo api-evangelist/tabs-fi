@@ -1,0 +1,121 @@
+openapi: 3.1.0
+info:
+  title: Tabs Platform BillingTerms Customers API
+  description: 'REST API for the Tabs revenue automation platform: customers, contracts, items, revenue categories, obligations, billing terms, invoices, payments, credit memos, usage events, and reports. Source: https://docs.tabsplatform.com/llms.txt'
+  version: '3'
+  contact:
+    name: Tabs
+    url: https://docs.tabsplatform.com/
+servers:
+- url: https://api.tabsplatform.com
+  description: Production (assumed; consult Tabs docs for exact base URL)
+security:
+- ApiKeyAuth: []
+tags:
+- name: Customers
+paths:
+  /customers:
+    get:
+      tags:
+      - Customers
+      summary: List customers
+      operationId: listCustomers
+      responses:
+        '200':
+          description: OK
+    post:
+      tags:
+      - Customers
+      summary: Create customer
+      operationId: createCustomer
+      responses:
+        '201':
+          description: Created
+  /customers/{id}:
+    parameters:
+    - name: id
+      in: path
+      required: true
+      schema:
+        type: string
+    get:
+      tags:
+      - Customers
+      summary: Get customer by ID
+      operationId: getCustomer
+      responses:
+        '200':
+          description: OK
+    delete:
+      tags:
+      - Customers
+      summary: Delete customer
+      operationId: deleteCustomer
+      responses:
+        '204':
+          description: Deleted
+  /customers/{id}/name:
+    parameters:
+    - name: id
+      in: path
+      required: true
+      schema:
+        type: string
+    patch:
+      tags:
+      - Customers
+      summary: Update customer name
+      operationId: updateCustomerName
+      responses:
+        '200':
+          description: OK
+  /customers/{id}/contacts:
+    parameters:
+    - name: id
+      in: path
+      required: true
+      schema:
+        type: string
+    get:
+      tags:
+      - Customers
+      summary: List contacts
+      operationId: listCustomerContacts
+      responses:
+        '200':
+          description: OK
+    post:
+      tags:
+      - Customers
+      summary: Create contacts
+      operationId: createCustomerContacts
+      responses:
+        '201':
+          description: Created
+  /customers/{id}/contacts/{contactId}:
+    parameters:
+    - name: id
+      in: path
+      required: true
+      schema:
+        type: string
+    - name: contactId
+      in: path
+      required: true
+      schema:
+        type: string
+    patch:
+      tags:
+      - Customers
+      summary: Update contact
+      operationId: updateCustomerContact
+      responses:
+        '200':
+          description: OK
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: Server-side API key issued from the Tabs dashboard for backend integrations.

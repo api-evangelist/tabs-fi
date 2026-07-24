@@ -1,0 +1,92 @@
+openapi: 3.1.0
+info:
+  title: Tabs Platform BillingTerms Invoices API
+  description: 'REST API for the Tabs revenue automation platform: customers, contracts, items, revenue categories, obligations, billing terms, invoices, payments, credit memos, usage events, and reports. Source: https://docs.tabsplatform.com/llms.txt'
+  version: '3'
+  contact:
+    name: Tabs
+    url: https://docs.tabsplatform.com/
+servers:
+- url: https://api.tabsplatform.com
+  description: Production (assumed; consult Tabs docs for exact base URL)
+security:
+- ApiKeyAuth: []
+tags:
+- name: Invoices
+paths:
+  /invoices:
+    get:
+      tags:
+      - Invoices
+      summary: List invoices
+      operationId: listInvoices
+      responses:
+        '200':
+          description: OK
+  /customers/{customerId}/invoices/{invoiceId}:
+    parameters:
+    - name: customerId
+      in: path
+      required: true
+      schema:
+        type: string
+    - name: invoiceId
+      in: path
+      required: true
+      schema:
+        type: string
+    get:
+      tags:
+      - Invoices
+      summary: Get invoice by ID
+      operationId: getInvoice
+      responses:
+        '200':
+          description: OK
+  /customers/{customerId}/invoices/{invoiceId}/pdf:
+    parameters:
+    - name: customerId
+      in: path
+      required: true
+      schema:
+        type: string
+    - name: invoiceId
+      in: path
+      required: true
+      schema:
+        type: string
+    get:
+      tags:
+      - Invoices
+      summary: Download invoice PDF
+      operationId: getInvoicePdf
+      responses:
+        '200':
+          description: OK
+  /customers/{customerId}/invoices/{invoiceId}/actions:
+    parameters:
+    - name: customerId
+      in: path
+      required: true
+      schema:
+        type: string
+    - name: invoiceId
+      in: path
+      required: true
+      schema:
+        type: string
+    post:
+      tags:
+      - Invoices
+      summary: Perform invoice action
+      operationId: invoiceAction
+      responses:
+        '200':
+          description: OK
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: Server-side API key issued from the Tabs dashboard for backend integrations.
