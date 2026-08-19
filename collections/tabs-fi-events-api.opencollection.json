@@ -1,0 +1,77 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Tabs Platform BillingTerms Events API",
+    "version": "3"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Events",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List events (legacy)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.tabsplatform.com/events"
+          },
+          "docs": "List events (legacy)"
+        },
+        {
+          "info": {
+            "name": "Create event (legacy)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.tabsplatform.com/events"
+          },
+          "docs": "Create event (legacy)"
+        },
+        {
+          "info": {
+            "name": "Bulk create events",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.tabsplatform.com/events/bulk"
+          },
+          "docs": "Bulk create events"
+        },
+        {
+          "info": {
+            "name": "Delete event",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.tabsplatform.com/events/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete event"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

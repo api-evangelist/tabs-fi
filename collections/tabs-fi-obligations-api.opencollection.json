@@ -1,0 +1,135 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Tabs Platform BillingTerms Obligations API",
+    "version": "3"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Obligations",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create contract obligation",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.tabsplatform.com/contracts/:id/obligations",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Create contract obligation"
+        },
+        {
+          "info": {
+            "name": "Get obligation by ID",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.tabsplatform.com/contracts/:id/obligations/:obligationId",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "obligationId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get obligation by ID"
+        },
+        {
+          "info": {
+            "name": "Update obligation",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://api.tabsplatform.com/contracts/:id/obligations/:obligationId",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "obligationId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update obligation"
+        },
+        {
+          "info": {
+            "name": "Delete obligation",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.tabsplatform.com/contracts/:id/obligations/:obligationId",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "obligationId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete obligation"
+        },
+        {
+          "info": {
+            "name": "List obligations",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.tabsplatform.com/obligations"
+          },
+          "docs": "List obligations"
+        },
+        {
+          "info": {
+            "name": "Upsert custom revenue",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.tabsplatform.com/obligations/custom-revenue"
+          },
+          "docs": "Upsert custom revenue"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

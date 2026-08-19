@@ -1,0 +1,70 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Tabs Platform BillingTerms System API",
+    "version": "3"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "System",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Health check",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.tabsplatform.com/health"
+          },
+          "docs": "Health check"
+        },
+        {
+          "info": {
+            "name": "Liveness check",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.tabsplatform.com/health/live"
+          },
+          "docs": "Liveness check"
+        },
+        {
+          "info": {
+            "name": "Get API version",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.tabsplatform.com/version"
+          },
+          "docs": "Get API version"
+        },
+        {
+          "info": {
+            "name": "Application information",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.tabsplatform.com/info"
+          },
+          "docs": "Application information"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,66 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Tabs Platform BillingTerms Commitments API",
+    "version": "3"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Commitments",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List commitments",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.tabsplatform.com/commitments"
+          },
+          "docs": "List commitments"
+        },
+        {
+          "info": {
+            "name": "Create commitments",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.tabsplatform.com/commitments"
+          },
+          "docs": "Create commitments"
+        },
+        {
+          "info": {
+            "name": "Update commitment",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://api.tabsplatform.com/commitments/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update commitment"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

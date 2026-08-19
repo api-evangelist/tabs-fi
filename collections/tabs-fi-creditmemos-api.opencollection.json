@@ -1,0 +1,84 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Tabs Platform BillingTerms CreditMemos API",
+    "version": "3"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "CreditMemos",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List credit memos",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.tabsplatform.com/credit-memos"
+          },
+          "docs": "List credit memos"
+        },
+        {
+          "info": {
+            "name": "Create credit memo",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.tabsplatform.com/credit-memos"
+          },
+          "docs": "Create credit memo"
+        },
+        {
+          "info": {
+            "name": "Get credit memo by ID",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.tabsplatform.com/credit-memos/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get credit memo by ID"
+        },
+        {
+          "info": {
+            "name": "Apply credit memo",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.tabsplatform.com/credit-memos/:id/apply",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Apply credit memo"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

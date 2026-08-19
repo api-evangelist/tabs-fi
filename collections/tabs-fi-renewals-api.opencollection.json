@@ -1,0 +1,37 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Tabs Platform BillingTerms Renewals API",
+    "version": "3"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Renewals",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List renewals",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.tabsplatform.com/renewals"
+          },
+          "docs": "List renewals"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

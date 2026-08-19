@@ -1,0 +1,119 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Tabs Platform BillingTerms API",
+    "version": "3"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "BillingTerms",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List billing terms",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.tabsplatform.com/billing-terms"
+          },
+          "docs": "List billing terms"
+        },
+        {
+          "info": {
+            "name": "List contract billing terms",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.tabsplatform.com/contracts/:id/billing-terms",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List contract billing terms"
+        },
+        {
+          "info": {
+            "name": "Create contract billing term",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.tabsplatform.com/contracts/:id/billing-terms",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Create contract billing term"
+        },
+        {
+          "info": {
+            "name": "Update billing term",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://api.tabsplatform.com/contracts/:id/billing-terms/:termId",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "termId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update billing term"
+        },
+        {
+          "info": {
+            "name": "Delete billing term",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.tabsplatform.com/contracts/:id/billing-terms/:termId",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "termId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete billing term"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,91 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Tabs Platform BillingTerms PerformanceObligations API",
+    "version": "3"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "PerformanceObligations",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List performance obligations",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.tabsplatform.com/contracts/:id/performance-obligations",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List performance obligations"
+        },
+        {
+          "info": {
+            "name": "Bulk save performance obligations",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.tabsplatform.com/contracts/:id/performance-obligations/batch",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Bulk save performance obligations"
+        },
+        {
+          "info": {
+            "name": "List performance obligations",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.tabsplatform.com/performance-obligations"
+          },
+          "docs": "List performance obligations"
+        },
+        {
+          "info": {
+            "name": "Update performance obligation",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://api.tabsplatform.com/performance-obligations/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update performance obligation"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

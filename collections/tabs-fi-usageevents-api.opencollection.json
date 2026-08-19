@@ -1,0 +1,66 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Tabs Platform BillingTerms UsageEvents API",
+    "version": "3"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "UsageEvents",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get all usage events (beta)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.tabsplatform.com/usage-events"
+          },
+          "docs": "Get all usage events (beta)"
+        },
+        {
+          "info": {
+            "name": "Create usage event (beta)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.tabsplatform.com/usage-events"
+          },
+          "docs": "Create usage event (beta)"
+        },
+        {
+          "info": {
+            "name": "Delete usage event",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.tabsplatform.com/usage-events/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete usage event"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
