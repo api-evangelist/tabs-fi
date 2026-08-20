@@ -24,6 +24,20 @@ tags:
   - Billing
   - Invoicing
   - Accounts Receivable
+  - Collection
+  - Revenue Recognition
+  - Contracts
+  - Usage
+  - Payments
+  - Subscription
+  - Finance
+  - B2B
+tags_raw:
+  - Tabs
+  - Revenue
+  - Billing
+  - Invoicing
+  - Accounts Receivable
   - Collections
   - Revenue Recognition
   - Contracts
@@ -47,6 +61,15 @@ apis:
     published at docs.tabsplatform.com/llms.txt.
   humanURL: https://docs.tabsplatform.com/
   tags:
+  - Billing
+  - Invoicing
+  - Collection
+  - Revenue Recognition
+  - Contracts
+  - Usage
+  - Payments
+  - Customers
+  tags_raw:
   - Billing
   - Invoicing
   - Collections
@@ -141,6 +164,8 @@ apis:
   description: The BillingTerms API from Tabs — 3 operation(s) for billingterms.
   humanURL: https://docs.tabsplatform.com/
   tags:
+  - Billing Terms
+  tags_raw:
   - BillingTerms
   properties:
   - type: OpenAPI
@@ -177,6 +202,8 @@ apis:
   description: The CreditMemos API from Tabs — 3 operation(s) for creditmemos.
   humanURL: https://docs.tabsplatform.com/
   tags:
+  - Credit Memos
+  tags_raw:
   - CreditMemos
   properties:
   - type: OpenAPI
@@ -195,6 +222,8 @@ apis:
   description: The CustomFields API from Tabs — 1 operation(s) for customfields.
   humanURL: https://docs.tabsplatform.com/
   tags:
+  - Custom Fields
+  tags_raw:
   - CustomFields
   properties:
   - type: OpenAPI
@@ -204,6 +233,8 @@ apis:
   description: The Events API from Tabs — 3 operation(s) for events.
   humanURL: https://docs.tabsplatform.com/
   tags:
+  - Event
+  tags_raw:
   - Events
   properties:
   - type: OpenAPI
@@ -213,6 +244,8 @@ apis:
   description: The EventTypes API from Tabs — 2 operation(s) for eventtypes.
   humanURL: https://docs.tabsplatform.com/
   tags:
+  - Event Types
+  tags_raw:
   - EventTypes
   properties:
   - type: OpenAPI
@@ -231,6 +264,8 @@ apis:
   description: The Items API from Tabs — 2 operation(s) for items.
   humanURL: https://docs.tabsplatform.com/
   tags:
+  - Item
+  tags_raw:
   - Items
   properties:
   - type: OpenAPI
@@ -240,6 +275,8 @@ apis:
   description: The Jobs API from Tabs — 1 operation(s) for jobs.
   humanURL: https://docs.tabsplatform.com/
   tags:
+  - Job
+  tags_raw:
   - Jobs
   properties:
   - type: OpenAPI
@@ -276,6 +313,8 @@ apis:
   description: The PerformanceObligations API from Tabs — 4 operation(s) for performanceobligations.
   humanURL: https://docs.tabsplatform.com/
   tags:
+  - Performance Obligations
+  tags_raw:
   - PerformanceObligations
   properties:
   - type: OpenAPI
@@ -321,6 +360,8 @@ apis:
   description: The UsageEvents API from Tabs — 2 operation(s) for usageevents.
   humanURL: https://docs.tabsplatform.com/
   tags:
+  - Usage Events
+  tags_raw:
   - UsageEvents
   properties:
   - type: OpenAPI
