@@ -2,6 +2,18 @@ aid: tabs-fi
 name: Tabs
 description: Tabs is an AI-native revenue automation platform for B2B companies, unifying billing, collections, revenue recognition, and reporting on top of a contract-driven data model. The platform ingests executed contracts and automatically generates invoices, schedules ASC 606-compliant revenue, drives collections through AI agents, and produces real-time ARR, cash, and AR reporting. It is designed for finance teams at SaaS and B2B subscription companies who need flexibility across subscription, usage-based, metered, and hybrid billing models. Tabs exposes a REST API and integrates with ERP, CRM, payment, and tax systems so contract, billing, and revenue data can flow into the rest of the finance stack. It is SOC 2 compliant and includes a unified customer record spanning contracts, usage, payments, and terms.
 type: Index
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - openapi
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: free
   onboarding: self-serve
