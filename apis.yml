@@ -176,7 +176,7 @@ apis:
   description: The BillingTerms API from Tabs — 3 operation(s) for billingterms.
   humanURL: https://docs.tabsplatform.com/
   tags:
-  - Billing Terms
+  - BillingTerms
   tags_raw:
   - BillingTerms
   properties:
@@ -214,7 +214,7 @@ apis:
   description: The CreditMemos API from Tabs — 3 operation(s) for creditmemos.
   humanURL: https://docs.tabsplatform.com/
   tags:
-  - Credit Memos
+  - CreditMemos
   tags_raw:
   - CreditMemos
   properties:
@@ -325,7 +325,7 @@ apis:
   description: The PerformanceObligations API from Tabs — 4 operation(s) for performanceobligations.
   humanURL: https://docs.tabsplatform.com/
   tags:
-  - Performance Obligations
+  - PerformanceObligations
   tags_raw:
   - PerformanceObligations
   properties:
@@ -372,7 +372,7 @@ apis:
   description: The UsageEvents API from Tabs — 2 operation(s) for usageevents.
   humanURL: https://docs.tabsplatform.com/
   tags:
-  - Usage Events
+  - UsageEvents
   tags_raw:
   - UsageEvents
   properties:
